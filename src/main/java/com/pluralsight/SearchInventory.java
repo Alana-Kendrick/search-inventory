@@ -18,7 +18,11 @@ public class SearchInventory {
     public static ArrayList<Product> getInventory() {
         ArrayList<Product> inventory = new ArrayList<>();
 
-        // Write your code here
+        inventory.add(new Product(87, "Spaghetti squash", 3.75 ));
+        inventory.add(new Product(21, "Family meal kit", 15.49 ));
+        inventory.add(new Product(402, "Smoked sausage", 3.99 ));
+        inventory.add(new Product(19, "Chili oil", 6.49 ));
+        inventory.add(new Product(78, "Butternut squash", 10.29 ));
 
         return inventory;
     }
