@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 
 // Starter for Search Inventory (Workbook 3a, Section 3-2 Using an ArrayList, Exercise 1).
@@ -18,11 +20,12 @@ public class SearchInventory {
     public static ArrayList<Product> getInventory() {
         ArrayList<Product> inventory = new ArrayList<>();
 
-        inventory.add(new Product(87, "Spaghetti squash", 3.75 ));
-        inventory.add(new Product(21, "Family meal kit", 15.49 ));
-        inventory.add(new Product(402, "Smoked sausage", 3.99 ));
-        inventory.add(new Product(19, "Chili oil", 6.49 ));
-        inventory.add(new Product(78, "Butternut squash", 10.29 ));
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("inventory.csv"));
+            String line;
+        } catch (Exception e) {
+            System.out.println("Something went wrong!");;
+        }
 
         return inventory;
     }
